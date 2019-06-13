@@ -1,3 +1,4 @@
+#()
 class Node:
     def __init__(self,data):
         self.data = data
@@ -42,10 +43,30 @@ class BinartSearchTree:
         if root_node.rightChild:
             self.traverseInOrder(root_node.rightChild)
 
+
+    def getMinValue(self):
+        if self.root:
+            return self.getMin(self.root)
+
+    def getMin(self, root_node):
+        if root_node.leftChild:
+            return self.getMin(root_node.leftChild)
+        return root_node.data
+        
+    def getMaxValue(self):
+        if self.root:
+            return self.getMax(self.root)
+
+    def getMax(self, root_node):
+        if root_node.rightChild:
+            return self.getMax(root_node.rightChild)
+        return root_node.data
+        
+
+        
 v = BinartSearchTree()
 v.insert(10)
 v.insert(5)
 v.insert(15)
 v.insert(6)
-
 v.traverse()
