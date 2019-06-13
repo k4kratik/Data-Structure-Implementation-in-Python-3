@@ -1,4 +1,3 @@
-#()
 class Node:
     def __init__(self,data):
         self.data = data
@@ -48,3 +47,5 @@ v.insert(10)
 v.insert(5)
 v.insert(15)
 v.insert(6)
+
+v.traverse()
