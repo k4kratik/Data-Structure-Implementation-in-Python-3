@@ -37,7 +37,7 @@ class BinartSearchTree:
         if root_node.leftChild:
             self.traverseInOrder(root_node.leftChild)
 
-        print("%s kj" % root_node.data)
+        print("%s" % root_node.data)
 
         if root_node.rightChild:
             self.traverseInOrder(root_node.rightChild)
